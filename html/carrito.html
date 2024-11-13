@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Ciclopro</title>
+    <title>Carrito de Compras</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/animaciones.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="../img/Logo-removebg-preview.png" alt="" style="width: 95px; height: 75px;"></a>
@@ -42,43 +43,24 @@
                 </ul>
             </div>
         </div>
-    </nav><br><br>
+    </nav><br><br><br><br>
 
-    <div class="container mt-5 pt-5">
-        <h2>Contacto</h2>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h4>Información de contacto</h4>
-                <p>Dirección: Calle 12, Ciudad Barranquilla</p>
-                <p>Teléfono: (123) 456-7890</p>
-                <p>Email: info@ciclopro.com</p>
-            </div>
-            <div class="col-md-6">
-                <h4>Ubicación</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.6315120589893!2d-74.8254019268998!3d10.99116145520011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42df09ac14567%3A0xf10812878fac876c!2sCiclo%20Estrada%20Norte!5e0!3m2!1ses!2sco!4v1731456955409!5m2!1ses!2sco" referrerpolicy="no-referrer-when-downgrade" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-        
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h4>Formulario de contacto</h4>
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-        </div>
+    <header class="bg-dark text-secondary">
+        <h1 class="text-center">Carrito de Compras</h1>
+    </header>
+
+    <div class="container py-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-contenido"></tbody>
+        </table>
+        <h3 id="total">Total: 0 $</h3>
     </div>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
@@ -94,9 +76,25 @@
           </svg> Instagram</a>
     </footer>
 
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js_funcionamiento/contacto.js"></script>
+    <style>
+        .container-icon{
+            width: 40px;
+            
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .no-link-style {
+        color: inherit; /* Mantener el color del contenedor */
+        text-decoration: none; /* Quitar el subrayado */
+    }
+    </style>
+
+    <script src="../js_funcionamiento/carrito.js"></script>
+    <script>
+        cargarCarrito();
+    </script>
 </body>
 </html>
