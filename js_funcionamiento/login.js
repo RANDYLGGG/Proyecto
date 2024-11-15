@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (email && password) {
             alert("Inicio de sesión con éxito");
-            window.location.href = "ruta_a_pagina_principal.html";
+            window.location.href = "";
         } else {
             alert("Por favor, completa todos los campos.");
         }
